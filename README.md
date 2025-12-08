@@ -1,3 +1,5 @@
-![App Screenshot](<img width="1442" height="847" alt="image" src="https://github.com/user-attachments/assets/08b19969-c3da-415f-b141-4e77f252a2ea" />
-)
+
+<img width="1350" height="847" alt="image" src="https://github.com/user-attachments/assets/13009d90-3536-4881-ab0b-d5e5755e5533" />
+
+Live demo - https://vai-bhav06.github.io/todo-manager/
 
