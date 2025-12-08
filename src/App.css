@@ -1,0 +1,276 @@
+/* base */
+body {
+margin: 0;
+background: #f0f2f5;
+font-family: Arial, sans-serif;
+color: #222;
+}
+
+.app {
+max-width: 1000px;
+margin: 30px auto;
+background: white;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 0 10px #ccc;
+}
+
+/* header */
+h1 {
+text-align: center;
+margin: 6px 0 16px 0;
+}
+
+/* layout: top row contains form and calendar */
+.top-row {
+display: flex;
+gap: 18px;
+align-items: flex-start;
+flex-wrap: wrap;
+}
+
+/* todo form */
+.todo-form {
+display: flex;
+gap: 8px;
+flex: 1 1 320px;
+align-items: center;
+}
+
+.todo-form input[type="text"] {
+flex: 1;
+padding: 10px;
+border: 1px solid gray;
+border-radius: 5px;
+}
+
+.todo-form .date-input {
+padding: 8px 6px;
+border: 1px solid gray;
+border-radius: 5px;
+}
+
+.todo-form button {
+padding: 10px 16px;
+background: #007bff;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+/* calendar */
+.calendar {
+width: 300px;
+border-radius: 8px;
+padding: 10px;
+border: 1px solid #e0e0e0;
+background: #fafafa;
+flex: 0 0 300px;
+}
+
+.cal-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 8px;
+}
+
+.cal-header button {
+border: none;
+background: transparent;
+cursor: pointer;
+font-size: 16px;
+padding: 6px;
+}
+
+.cal-grid {
+display: grid;
+grid-template-columns: repeat(7, 1fr);
+gap: 6px;
+}
+
+.cal-weekday {
+font-size: 12px;
+text-align: center;
+color: #555;
+}
+
+.cal-cell {
+min-height: 54px;
+padding: 6px;
+border-radius: 6px;
+background: white;
+position: relative;
+cursor: pointer;
+border: 1px solid #f0f0f0;
+}
+
+.cal-cell.empty {
+background: transparent;
+border: none;
+cursor: default;
+}
+
+.cal-cell.today {
+box-shadow: inset 0 0 0 2px rgba(0,123,255,0.12);
+border-color: rgba(0,123,255,0.25);
+}
+
+.cell-day {
+font-weight: 600;
+font-size: 13px;
+}
+
+.cell-badge {
+position: absolute;
+right: 6px;
+top: 6px;
+background: #007bff;
+color: white;
+font-size: 11px;
+padding: 2px 6px;
+border-radius: 12px;
+}
+
+/* todo list */
+.todo-list {
+margin-top: 18px;
+}
+
+.todo-item {
+display: flex;
+align-items: center;
+justify-content: space-between;
+background: #fafafa;
+padding: 10px;
+border-radius: 6px;
+margin-bottom: 10px;
+border-left: 5px solid #007bff;
+}
+
+.todo-item.completed {
+text-decoration: line-through;
+opacity: 0.6;
+border-left-color: green;
+}
+
+.todo-main {
+display: flex;
+gap: 12px;
+align-items: center;
+flex: 1;
+}
+
+.todo-text {
+cursor: pointer;
+flex: 1;
+}
+
+.meta {
+font-size: 12px;
+color: #555;
+}
+
+.due {
+background: #fff3cd;
+padding: 4px 8px;
+border-radius: 6px;
+border: 1px solid #ffeeba;
+}
+
+.due.none {
+background: transparent;
+border: none;
+}
+
+/* edit area in item */
+.edit-area {
+display: flex;
+gap: 8px;
+align-items: center;
+}
+
+.edit-input {
+padding: 8px;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+
+/* actions */
+.actions button {
+margin-left: 8px;
+padding: 6px 10px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+
+.actions .delete {
+background: #dc3545;
+color: white;
+}
+
+/* filter */
+.filter {
+display: flex;
+justify-content: center;
+margin-top: 12px;
+gap: 8px;
+flex-wrap: wrap;
+align-items: center;
+}
+
+.filter button {
+padding: 8px 12px;
+border: 1px solid #007bff;
+background: white;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.filter .active {
+background: #007bff;
+color: white;
+}
+
+.selected-day {
+display: flex;
+gap: 8px;
+align-items: center;
+padding-left: 8px;
+}
+
+.clear-day {
+padding: 4px 8px;
+border-radius: 6px;
+border: none;
+background: #e0e0e0;
+cursor: pointer;
+}
+
+/* small text */
+.empty {
+text-align: center;
+color: gray;
+}
+
+.showing-day {
+margin: 8px 0;
+font-weight: 500;
+color: #444;
+}
+
+/* responsive */
+@media (max-width: 760px) {
+.top-row {
+flex-direction: column;
+}
+.calendar {
+width: 100%;
+flex: 1 1 auto;
+}
+.todo-form {
+width: 100%;
+}
+}
